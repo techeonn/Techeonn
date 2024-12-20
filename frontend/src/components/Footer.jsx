@@ -33,10 +33,10 @@ const Footer = () => {
               Quick Links
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
-              {["Home", "Projects", "Blogs", "About Us", "Contact"].map((link) => (
+              {["Home", "Projects","Services", "Blogs", "About Us", "Contact"].map((link) => (
                 <Link
                   key={link}
-                  href={`/${link.toLowerCase().replace(/\s+/g, "")}`}
+                  to={`/${link.toLowerCase().replace(/\s+/g, "")}`}
                   color="inherit"
                   sx={{ mb: 1 }}
                   underline="hover"
