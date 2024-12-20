@@ -11,7 +11,7 @@ const ServicesPage = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      await axios.post("http://localhost:3000/api/contact", data);
+      await axios.post("https://techeonn.onrender.com/api/contact", data);
       setFormStatus({ success: true, error: false });
     } catch (error) {
       console.error("Error submitting the form:", error);

@@ -12,7 +12,7 @@ const BlogPage = () => {
     // Fetch the blog details from the API
     const fetchBlogDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/blogs/${id}`);
+        const response = await fetch(`https://techeonn.onrender.com/api/blogs/${id}`);
         const data = await response.json();
         setBlog(data);
         setLoading(false);

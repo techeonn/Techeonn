@@ -28,7 +28,7 @@ const ProjectGallery = () => {
   const fetchProjects = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:3000/api/projects?page=${currentPage}&limit=${projectsPerPage}`);
+      const response = await fetch(`https://techeonn.onrender.com/api/projects?page=${currentPage}&limit=${projectsPerPage}`);
       const data = await response.json();
       setProjects(data.projects);
       setTotalProjects(data.totalProjects);
