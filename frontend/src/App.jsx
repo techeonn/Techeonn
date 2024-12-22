@@ -46,7 +46,7 @@ const App = () => {
       </Routes>
 
       {/* Footer - Always Visible */}
-      <ChatbotComponent/>
+      {/* <ChatbotComponent/> */}
       <Footer />
     </Router>
   );

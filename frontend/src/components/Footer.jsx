@@ -16,14 +16,15 @@ const Footer = () => {
       }}
     >
       <Container>
-        <Grid container spacing={4} justifyContent="space-between">
+        <Grid container spacing={8} justifyContent="space-around">
           {/* Footer Left Section */}
           <Grid item xs={12} md={4}>
-            <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
+            {/* <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
               TechEon
-            </Typography>
+            </Typography> */}
+            <img src="/images/full-logo.png" alt="" width={"100%"} />
             <Typography variant="body2">
-              Your go-to platform for coding projects and insightful blogs. Follow us for updates and tutorials.
+            TechEonn delivers comprehensive IT services and cutting-edge web solutions. Leveraging innovation and expertise, we empower your business to achieve success.
             </Typography>
           </Grid>
 
@@ -78,7 +79,7 @@ const Footer = () => {
         {/* Footer Bottom Section */}
         <Box sx={{ mt: 4, textAlign: "center" }}>
           <Typography variant="body2">
-            &copy; {new Date().getFullYear()} TechEon. All Rights Reserved.
+            &copy; {new Date().getFullYear()} TechEonn. All Rights Reserved.
           </Typography>
         </Box>
       </Container>
