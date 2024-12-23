@@ -31,6 +31,18 @@ const BlogsPage = () => {
     fetchBlogs(currentPage);
   }, [currentPage]);
 
+  function formatSummary(summary, desiredLength) {
+    if (summary.length > desiredLength) {
+        // Truncate and add ellipsis
+        return summary.slice(0, desiredLength - 3) + "...";
+    } else if (summary.length < desiredLength) {
+        // Pad with spaces
+        return summary.padEnd(desiredLength, " ");
+    } else {
+        // If the summary is already the desired length, return as is
+        return summary;
+    }
+}
   if (loading) {
     return (
       <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
@@ -57,7 +69,9 @@ const BlogsPage = () => {
       <Grid container spacing={4}>
         {blogs.map((blog) => (
           <Grid item xs={12} sm={6} md={4} key={blog._id}>
-            <Card sx={{ height: '100%',boxShadow: 3,
+            <Card sx={{ height: 'auto',boxShadow: 3,
+              background:"rgba(255,255,255,0.9)",
+
       borderRadius: "10px",
       transition: "transform 0.3s ease, box-shadow 0.3s ease",
       "&:hover": {
@@ -78,7 +92,7 @@ const BlogsPage = () => {
                   {blog.title}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" paragraph>
-                  {blog.summary}
+                {formatSummary(blog.summary,50)}
                 </Typography>
                 <Link to={`/blogs/${blog._id}`} style={{ textDecoration: 'none' }}>
                   <Button variant="contained" color="primary" fullWidth>

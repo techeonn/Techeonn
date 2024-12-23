@@ -92,6 +92,7 @@ function HomePageWithVideoBackground() {
         </Typography>
         <Button
           variant="contained"
+          href="/services"
           sx={{
             backgroundColor: "#FFFFFF",
             color: "#000",

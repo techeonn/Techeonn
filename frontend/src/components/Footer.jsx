@@ -77,11 +77,25 @@ const Footer = () => {
         </Grid>
 
         {/* Footer Bottom Section */}
-        <Box sx={{ mt: 4, textAlign: "center" }}>
-          <Typography variant="body2">
-            &copy; {new Date().getFullYear()} TechEonn. All Rights Reserved.
-          </Typography>
-        </Box>
+        <Box sx={{ mt: 4, textAlign: "center", py: 2}}>
+  <Typography 
+    variant="body2" 
+    sx={{ 
+
+      fontSize: { xs: "12px", sm: "14px" }, 
+      color: "white", 
+      "& a": { 
+        textDecoration: "none", 
+        color: "#007BFF", 
+        marginLeft: "8px", 
+        "&:hover": { textDecoration: "underline",cursor:"pointer" }
+      } 
+    }}
+  >
+    &copy; {new Date().getFullYear()} TechEonn | All Rights Reserved |  Terms of Use |<Link href="https://drive.google.com/file/d/1GTUsqMgmAAhHNvqFpDUoN-Llhq3s3TwY/view?usp=sharing">Privacy Policy</Link> | Sitemap
+  </Typography>
+</Box>
+
       </Container>
     </Box>
   );

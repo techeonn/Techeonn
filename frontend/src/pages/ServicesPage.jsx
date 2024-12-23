@@ -102,7 +102,8 @@ const ServicesPage = () => {
         <Typography variant="h4" gutterBottom>
           Contact Us
         </Typography>
-        <Paper elevation={3} sx={{ padding: 4, borderRadius:10,  boxShadow: "0 8px 20px rgba(255, 255, 255, 0.53)" }}>
+        <Paper elevation={3} sx={{ padding: 4, borderRadius:10,  boxShadow: "0 8px 20px rgba(255, 255, 255, 0.53)" ,background:"rgba(255,255,255,0.9)",
+}}>
           {formStatus.success && (
             <Alert severity="success" sx={{ marginBottom: 2 }}>
               Thank you! Your inquiry has been submitted.

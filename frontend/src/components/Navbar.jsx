@@ -65,30 +65,49 @@ const Navbar = () => {
 
         {/* Dropdown Menu for Mobile */}
         <Menu
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={handleMenuClose}
-          sx={{ display: { xs: "block", md: "none" }  ,backgroundColor:  "rgba(0, 0, 0, 0.5)" ,borderRadius:"4px"}}
-        >
-          <MenuItem onClick={handleMenuClose} component={Link} to="/">
-            Home
-          </MenuItem>
-          <MenuItem onClick={handleMenuClose} component={Link} to="/projects">
-            Projects
-          </MenuItem>
-          <MenuItem onClick={handleMenuClose} component={Link} to="/services">
-            Services
-          </MenuItem>
-          <MenuItem onClick={handleMenuClose} component={Link} to="/blogs">
-            Blogs
-          </MenuItem>
-          <MenuItem onClick={handleMenuClose} component={Link} to="/about">
-            About Us
-          </MenuItem>
-          <MenuItem onClick={handleMenuClose} component={Link} to="/contact">
-            Contact
-          </MenuItem>
-        </Menu>
+  anchorEl={anchorEl}
+  open={Boolean(anchorEl)}
+  onClose={handleMenuClose}
+  sx={{
+    display: { xs: "block", md: "none" },
+    backgroundColor: "rgba(255, 255, 255, 0.9)",
+    borderRadius: "8px",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+    mt: 1,
+    "& .MuiMenuItem-root": {
+      padding: "12px 24px",
+      fontSize: "16px",
+      fontWeight: 500,
+      color: "#333",
+      borderRadius: "6px",
+      "&:hover": {
+        backgroundColor: "rgba(0, 0, 0, 0.1)",
+        color: "#007BFF",
+        transition: "all 0.3s ease",
+      },
+    },
+  }}
+>
+  <MenuItem onClick={handleMenuClose} component={Link} to="/">
+    Home
+  </MenuItem>
+  <MenuItem onClick={handleMenuClose} component={Link} to="/projects">
+    Projects
+  </MenuItem>
+  <MenuItem onClick={handleMenuClose} component={Link} to="/services">
+    Services
+  </MenuItem>
+  <MenuItem onClick={handleMenuClose} component={Link} to="/blogs">
+    Blogs
+  </MenuItem>
+  <MenuItem onClick={handleMenuClose} component={Link} to="/about">
+    About Us
+  </MenuItem>
+  <MenuItem onClick={handleMenuClose} component={Link} to="/contact">
+    Contact
+  </MenuItem>
+</Menu>
+
       </Toolbar>
     </AppBar>
   );

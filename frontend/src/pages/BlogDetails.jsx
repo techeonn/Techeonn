@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Typography, Button, Box, CircularProgress, Grid, Card, CardContent } from '@mui/material';
 import { Link } from 'react-router-dom';
+import DOMPurify from 'dompurify';
 
 const BlogPage = () => {
   const { id } = useParams();  // Extract blog id from the URL
@@ -37,6 +38,8 @@ const BlogPage = () => {
     return <Typography variant="h6" align="center">Blog not found!</Typography>;
   }
 
+  const sanitizedContent = DOMPurify.sanitize(blog.content);
+
   return (
     <Container sx={{ py: 4 ,mt:5}}>
       <Grid container spacing={3}>
@@ -51,10 +54,8 @@ const BlogPage = () => {
               </Typography>
               <img src={blog.image} alt={blog.title} style={{ width: '100%',height:"auto", borderRadius: '8px', marginBottom: '20px' }} />
               <Typography variant="body1" paragraph>
-                {blog.content}
+              <span dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
               </Typography>
-
-              {/* Demo and Buy Now options (If applicable) */}
              
             </CardContent>
           </Card>

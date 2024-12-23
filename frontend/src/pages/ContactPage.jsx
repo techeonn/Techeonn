@@ -39,7 +39,7 @@ const ContactPage = () => {
   
 
   return (
-    <Container maxWidth="lg" sx={{ py: 6, mt: 5 }}>
+    <Container  sx={{ py: 6, mt: 5, width:"100vw" }}>
       <Typography variant="h3" component="h1" gutterBottom align="center">
         Contact Us
       </Typography>
@@ -48,7 +48,7 @@ const ContactPage = () => {
         container 
         spacing={4} 
         alignItems="center"
-        sx={{ height: isMobile ? 'auto' : '80vh' }} 
+        sx={{ height: isMobile ? 'auto' : '80vh',width:"90vw" }} 
       >
         {/* Contact Form Section */}
         <Grid item xs={12} md={6}>
@@ -63,6 +63,7 @@ const ContactPage = () => {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
+              background:"rgba(255,255,255,0.9)",
             }}
           >
             <Typography variant="h5" gutterBottom>
@@ -124,10 +125,10 @@ const ContactPage = () => {
         </Grid>
 
         {/* Spline 3D Model Section */}
-        <Grid item xs={12} md={6}>
-          {!isMobile && <Box
+        {!isMobile &&  <Grid item xs={12} md={6} height={"80vh"} width={"50vw"}>
+          <Box
             sx={{
-              height: isMobile ? '300px' : '100%',
+              height: '100%',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
@@ -137,11 +138,11 @@ const ContactPage = () => {
             }}
           >
             <Spline
-              style={{ width: '100%', height: '100%' }}
-              scene="https://prod.spline.design/aMZvVIOOpTCeKOBR/scene.splinecode"
+              style={{ width: '100%', height: '100%' ,objectFit:"contain"}}
+              scene="https://prod.spline.design/8lmHgOBUCOI5n5lQ/scene.splinecode"
             />
-          </Box>}
-        </Grid>
+          </Box>
+        </Grid>}
       </Grid>
     </Container>
   );

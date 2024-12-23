@@ -59,6 +59,9 @@ const ProjectGallery = () => {
             {projects.map((project) => (
               <Grid item xs={12} sm={6} md={4} key={project._id}>
                 <Card sx={{ maxWidth: 345, boxShadow: 3,
+
+              background:"rgba(255,255,255,0.9)",
+
       borderRadius: "10px",
       transition: "transform 0.3s ease, box-shadow 0.3s ease",
       "&:hover": {
@@ -82,7 +85,7 @@ const ProjectGallery = () => {
                   </CardContent>
                   <Box sx={{ display: "flex", justifyContent: "space-between", p: 2 }}>
                     <Typography variant="body2" color="text.primary">
-                      ${project.price}
+                    ₹{project.price}
                     </Typography>
                     <Button
                       component={Link}
