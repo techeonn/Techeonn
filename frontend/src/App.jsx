@@ -12,14 +12,15 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ChatbotComponent from "./components/ChatBotComponent.jsx";
 import ServicesPage from "./pages/ServicesPage.jsx";
+import { Box } from "@mui/material";
 
 
 
 const App = () => {
   
   return (
-    
-    <Router>
+    <Box overflow={"hidden"} width={"100vw"}>
+      <Router>
       {/* Navbar - Always Visible */}
       <Navbar />
 
@@ -49,6 +50,8 @@ const App = () => {
       {/* <ChatbotComponent/> */}
       <Footer />
     </Router>
+    </Box>
+    
   );
 };
 

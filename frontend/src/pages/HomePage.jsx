@@ -256,7 +256,7 @@ const HomePage = () => {
             color: "#000",
             fontWeight: "bold",
             borderRadius: "20px",
-            padding: "10px 20px",
+            padding: "1% 2%",
             marginTop: "2%",
             marginLeft: "7%"
           }}
@@ -650,7 +650,7 @@ const HomePage = () => {
       </Typography>
 
 
-      <Grid container spacing={4} alignItems={"center"} margin={"2% auto"}>
+      <Grid container spacing={2} alignItems={"center"} margin={"2% 1%"}>
         {blogs.map((blog) => (
           <Grid item xs={12} sm={6} md={4} key={blog._id}>
             <Card sx={{
@@ -688,14 +688,33 @@ const HomePage = () => {
               </CardContent>
             </Card>
           </Grid>
+
         ))}
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "#FFFFFF",
+            color: "#000",
+            fontWeight: "bold",
+            borderRadius: "20px",
+            padding: "1% 2%",
+            marginTop: "2%",
+            marginLeft: "7%"
+          }}
+
+          href="/blogs"
+        >
+          More blogs &rarr;
+        </Button>
       </Grid>
 
 
       <hr />
       <Card
         sx={{
+          
           padding: "2%",
+          width:"85%",
           maxWidth: 400,
           margin: '3% auto',
           background: "linear-gradient(152deg, rgba(2,0,36,1) 0%, rgba(166,93,218,1) 1%, rgba(102,49,172,1) 47%, rgba(42,96,179,1) 100%, rgba(0,212,255,1) 100%)",

@@ -15,10 +15,10 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor:  "rgba(0, 0, 0, 0.5)" ,borderRadius:"4px"}}>
+    <AppBar position="fixed" sx={{ backgroundColor:  "rgba(0, 0, 0, 0.5)" ,borderRadius:"4px",width:"100%"}}>
       <Toolbar>
         {/* Logo */}
-        <Box component="img" src="images/logo.png" alt="TechEon Logo" sx={{ height: 40, mr: 2 }} />
+        <Box component="img" src="images/logo.png" alt="TechEon Logo" sx={{ height: 40, mr: 1 }} />
 
         <Typography
           variant="h6"
@@ -70,12 +70,12 @@ const Navbar = () => {
   onClose={handleMenuClose}
   sx={{
     display: { xs: "block", md: "none" },
-    backgroundColor: "rgba(255, 255, 255, 0.9)",
+    backgroundColor: "rgba(255, 255, 255, 0.3)",
     borderRadius: "8px",
     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
     mt: 1,
     "& .MuiMenuItem-root": {
-      padding: "12px 24px",
+      padding: "12px 12px",
       fontSize: "16px",
       fontWeight: 500,
       color: "#333",
