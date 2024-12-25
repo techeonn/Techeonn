@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Button, useTheme } from "@mui/material";
 import { styled } from "@mui/system";
+import { Link } from "react-router-dom";
 
 // Styled Component for the Background Section
 const VideoBackground = styled(Box)(({ theme }) => ({
@@ -90,9 +91,10 @@ function HomePageWithVideoBackground() {
           industry-specific technologies designed to drive success and maximize
           potential.
         </Typography>
+        <Link to="/services">
         <Button
           variant="contained"
-          href="/services"
+          
           sx={{
             backgroundColor: "#FFFFFF",
             color: "#000",
@@ -104,8 +106,10 @@ function HomePageWithVideoBackground() {
             },
           }}
         >
+          
           Get Started &rarr;
         </Button>
+          </Link>
       </Content>
     </VideoBackground>
   );

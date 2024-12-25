@@ -249,6 +249,7 @@ const HomePage = () => {
           </Grid>
 
         </Grid>
+        <Link to="/about">
         <Button
           variant="contained"
           sx={{
@@ -261,10 +262,10 @@ const HomePage = () => {
             marginLeft: "7%"
           }}
 
-          href="/about"
         >
           About Us &rarr;
         </Button>
+        </Link>
       </Box>
 
       <hr />
@@ -690,6 +691,7 @@ const HomePage = () => {
           </Grid>
 
         ))}
+        <Link to="/blogs" sx={{width:"auto"}}>
         <Button
           variant="contained"
           sx={{
@@ -697,15 +699,16 @@ const HomePage = () => {
             color: "#000",
             fontWeight: "bold",
             borderRadius: "20px",
-            padding: "1% 2%",
-            marginTop: "2%",
-            marginLeft: "7%"
+            padding: "3% 4%",
+            marginTop: "6%",
+            marginLeft: "7%",
+            textAlign:"center",
+            width:"140px"
           }}
-
-          href="/blogs"
         >
           More blogs &rarr;
         </Button>
+        </Link>
       </Grid>
 
 
