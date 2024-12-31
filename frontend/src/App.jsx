@@ -16,10 +16,14 @@ import { Box } from "@mui/material";
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
 
+
+
 const App = () => {
+
   
   return (
     <Box overflow={"hidden"} width={"100vw"}>
+      
       <Router>
       {/* Navbar - Always Visible */}
       <Navbar />
