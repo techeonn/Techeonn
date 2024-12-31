@@ -68,6 +68,7 @@ exports.verifyPayment=async (req, res) => {
         pass: process.env.EMAIL_PASS,
       },
     });
+    console.log(downloadLink);
 
     await transporter.sendMail({
       from:  process.env.EMAIL_USER,

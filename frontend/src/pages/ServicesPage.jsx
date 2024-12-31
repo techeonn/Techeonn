@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Typography, Grid, Box, Button, TextField, Paper, Alert } from "@mui/material";
+import { Container, Typography, Grid, Box, Button, TextField, Paper, Alert, Card, CardMedia, CardContent } from "@mui/material";
 import axios from "axios";
 
 const ServicesPage = () => {
@@ -66,35 +66,45 @@ const ServicesPage = () => {
         <Typography variant="h4" gutterBottom>
           Portfolio
         </Typography>
-        <Grid container spacing={4}>
-          {[
-            { name: "EasyPay", description: "Visualizing financial data.", technologies: "React, Node.js", link: "#" },
-            { name: "HealthShield", description: "AI-powered health predictions.", technologies: "Python, Flask", link: "#" },
-            { name: "WeatherNow", description: "Real-time weather updates.", technologies: "React, OpenWeatherMap API", link: "#" },
-          ].map((project, index) => (
-            <Grid item xs={12} md={4} key={index} >
-              <Paper elevation={3} sx={{ padding: 2 ,boxShadow: 3,
+        <Grid item xs={12} sm={6} md={4} >
+                <Card sx={{ maxWidth: 345, boxShadow: 3,
+
+              background:"rgba(255,255,255,0.9)",
+
       borderRadius: "10px",
       transition: "transform 0.3s ease, box-shadow 0.3s ease",
       "&:hover": {
         transform: "scale(1.05) rotate(1deg)",
-        boxShadow: "0 8px 20px rgba(255, 255, 255, 0.53)"}}}>
-                <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                  {project.name}
-                </Typography>
-                <Typography variant="body2" sx={{ marginBottom: 1 }}>
-                  {project.description}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" sx={{ marginBottom: 1 }}>
-                  Technologies: {project.technologies}
-                </Typography>
-                <Button variant="outlined" href={project.link} target="_blank">
-                  View Project
-                </Button>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
+        boxShadow: "0 8px 20px rgba(255, 255, 255, 0.53)",
+      }}}>
+                  <CardMedia
+                    component="img"
+                    alt="InnSync - Hotel Management System"
+                    height="200"
+                    image={"images/InnSync.png"|| "images/default-image.jpg"}
+                    sx={{ objectFit: "contain" }}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h6" component="div">
+                      InnSync - Hotel Management System
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {"InnSync is a modern hotel management system that simplifies customer check-ins, automates billing, and ensures secure mobile number verification with OTP. Built with a robust and scalable tech stack, InnSync enhances operational efficiency and delivers a seamless experience for both staff and guests. Perfect for hotels looking to streamline processes and improve customer trust.".slice(0, 100)}...
+                    </Typography>
+                  </CardContent>
+                  {/* <Box sx={{ display: "flex", justifyContent: "space-between", p: 2 }}>
+                    <Button
+                      component={Link}
+                      to={`/projects/${project._id}`}
+                      variant="contained"
+                      color="primary"
+                    >
+                      View Details
+                    </Button>
+                  </Box> */}
+                </Card>
+              </Grid>
+
       </Box>
 
       {/* Contact Form */}

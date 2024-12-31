@@ -82,7 +82,7 @@ const AboutPage = () => {
               Techeon is not just a place to view projects but an ecosystem that encourages learning, growth, and
               exploration in the ever-evolving world of technology.
             </Typography>
-            <Button variant="contained" color="secondary" sx={{ mt: 3 }} component={Link} to="/">
+            <Button variant="contained" color="secondary" sx={{ mt: 3 }} component={Link} to="/projects">
               Explore Projects
             </Button>
           </Box>
