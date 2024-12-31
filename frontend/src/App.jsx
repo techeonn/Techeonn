@@ -10,7 +10,7 @@ import ContactPage from "./pages/ContactPage";
 // import NotFoundPage from "./pages/NotFoundPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import ChatbotComponent from "./components/ChatBotComponent.jsx";
+// import ChatbotComponent from "./components/ChatBotComponent.jsx";
 import ServicesPage from "./pages/ServicesPage.jsx";
 import { Box } from "@mui/material";
 import { SpeedInsights } from "@vercel/speed-insights/react"
