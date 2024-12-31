@@ -20,7 +20,7 @@ const ProjectPage = () => {
     // Fetch project details from API
     const fetchProject = async () => {
       try {
-        const response = await axios.get(`https://techeonn.onrender.com/api/projects/${id}`);
+        const response = await axios.get(`https://techeonn.vercel.app/api/projects/${id}`);
         setProject(response.data);
       } catch (error) {
         console.error('Error fetching project data:', error);
@@ -41,7 +41,7 @@ const ProjectPage = () => {
 
     try {
       // Step 1: Create an order
-      const orderResponse = await axios.post('https://techeonn.onrender.com/api/payments/create-order', {
+      const orderResponse = await axios.post('https://techeonn.vercel.app/api/payments/create-order', {
         amount: project.price,
         email,
         projectId: id,
@@ -61,7 +61,7 @@ const ProjectPage = () => {
         handler: async (response) => {
           // Step 3: Verify payment
           try {
-            const verifyResponse = await axios.post('https://techeonn.onrender.com/api/payments/verify-payment', {
+            const verifyResponse = await axios.post('https://techeonn.vercel.app/api/payments/verify-payment', {
               razorpay_order_id: response.razorpay_order_id,
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_signature: response.razorpay_signature,

@@ -15,7 +15,7 @@ const HomePage = () => {
   const fetchBlogs = async (page = 1) => {
     try {
       setLoading(true);
-      const response = await axios.get(`https://techeonn.onrender.com/api/blogs?page=${page}&limit=3`);
+      const response = await axios.get(`https://techeonn.vercel.app/api/blogs?page=${page}&limit=3`);
       setBlogs(response.data.blogs);
     } catch (err) {
       console.log(err)

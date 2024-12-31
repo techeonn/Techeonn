@@ -24,7 +24,7 @@ const ContactPage = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post('https://techeonn.onrender.com/send-email', formData);
+      const response = await axios.post('https://techeonn.vercel.app/send-email', formData);
       if (response.status === 200) {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', message: '' });

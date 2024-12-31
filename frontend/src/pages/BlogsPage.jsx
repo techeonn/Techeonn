@@ -15,7 +15,7 @@ const BlogsPage = () => {
   const fetchBlogs = async (page = 1) => {
     try {
       setLoading(true);
-      const response = await axios.get(`https://techeonn.onrender.com/api/blogs?page=${page}&limit=6`);
+      const response = await axios.get(`https://techeonn.vercel.app/api/blogs?page=${page}&limit=6`);
       setBlogs(response.data.blogs);
       setTotalPages(response.data.totalPages);
       setCurrentPage(response.data.currentPage);

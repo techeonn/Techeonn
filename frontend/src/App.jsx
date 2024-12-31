@@ -14,7 +14,7 @@ import ChatbotComponent from "./components/ChatBotComponent.jsx";
 import ServicesPage from "./pages/ServicesPage.jsx";
 import { Box } from "@mui/material";
 
-
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
   
@@ -50,6 +50,7 @@ const App = () => {
       {/* <ChatbotComponent/> */}
       <Footer />
     </Router>
+    <Analytics/>
     </Box>
     
   );
