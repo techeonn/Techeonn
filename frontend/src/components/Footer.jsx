@@ -57,7 +57,7 @@ const Footer = () => {
               {[
                 { icon: <Facebook />, href: "https://www.facebook.com" },
                 { icon: <Twitter />, href: "https://twitter.com" },
-                { icon: <Instagram />, href: "https://www.instagram.com" },
+                { icon: <Instagram />, href: "https://www.instagram.com/techeonn/" },
                 { icon: <LinkedIn />, href: "https://www.linkedin.com" },
               ].map(({ icon, href }) => (
                 <IconButton
