@@ -125,7 +125,7 @@ const ProjectPage = () => {
                 variant="contained"
                 color="primary"
                 sx={{ marginRight: 2 }}
-                href={project.demoUrl}
+                href={project.demo}
                 target="_blank"
               >
                 View Demo

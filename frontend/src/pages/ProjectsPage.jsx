@@ -72,7 +72,7 @@ const ProjectGallery = () => {
                     component="img"
                     alt={project.name}
                     height="200"
-                    image={project.image || "/default-image.jpg"}
+                    image={project.image || "images/default-image.jpg"}
                     sx={{ objectFit: "cover" }}
                   />
                   <CardContent>
