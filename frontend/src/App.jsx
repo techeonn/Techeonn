@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import ChatbotComponent from "./components/ChatBotComponent.jsx";
 import ServicesPage from "./pages/ServicesPage.jsx";
 import { Box } from "@mui/material";
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
@@ -51,6 +51,7 @@ const App = () => {
       <Footer />
     </Router>
     <Analytics/>
+    <SpeedInsights/>
     </Box>
     
   );
