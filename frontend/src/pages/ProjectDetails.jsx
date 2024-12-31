@@ -51,7 +51,7 @@ const ProjectPage = () => {
 
       // Step 2: Razorpay payment options
       const options = {
-        key: 'rzp_test_PSVDDW9cX0ZoT5', // Replace with your Razorpay key ID
+        key: process.env.REACT_APP_RAZORPAY_KEY_ID, // Replace with your Razorpay key ID
         amount: project.price * 100, // Convert price to paise
         currency: 'INR',
         name: 'TechEon',
