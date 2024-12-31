@@ -49,7 +49,7 @@ const ProjectPage = () => {
 
       const { orderId } = orderResponse.data;
       const razorpayKeyId = import.meta.env.REACT_APP_RAZORPAY_KEY_ID;
-
+      console.log(razorpayKeyId);
 
       // Step 2: Razorpay payment options
       const options = {
