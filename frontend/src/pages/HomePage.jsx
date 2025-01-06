@@ -620,7 +620,7 @@ const HomePage = () => {
 
       <hr />
 
-
+{/* 
       <Typography
         variant="h6"
         gutterBottom
@@ -709,7 +709,7 @@ const HomePage = () => {
           More blogs &rarr;
         </Button>
         </Link>
-      </Grid>
+      </Grid> */}
 
 
       <hr />
