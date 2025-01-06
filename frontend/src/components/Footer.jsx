@@ -120,8 +120,14 @@ const Footer = () => {
               }
             }}
           >
-            &copy; {new Date().getFullYear()} TechEonn | All Rights Reserved | <Link href="https://docs.google.com/document/d/1oo4wCPYR3bvbPo78wkMpnho5Lye82YK1I0mY4WslDpY/edit?usp=sharing">Terms and Conditions</Link> | <Link href="https://drive.google.com/file/d/1GTUsqMgmAAhHNvqFpDUoN-Llhq3s3TwY/view?usp=sharing">Privacy Policy</Link> | <Link href="https://docs.google.com/document/d/1y8U1B1fI6gp7D0VT74DlA5eRLNqzApAW_5RdJGlUeX0/edit?usp=sharing">Refund Policy</Link> | Sitemap
-          </Typography>
+            &copy; {new Date().getFullYear()} TechEonn | All Rights Reserved | <Button component={Link} to="https://docs.google.com/document/d/1oo4wCPYR3bvbPo78wkMpnho5Lye82YK1I0mY4WslDpY/edit?usp=sharing" sx={{ color: "white", fontWeight: "bold" }}>
+            Terms and Conditions
+              </Button> |  <Button component={Link} to="https://drive.google.com/file/d/1GTUsqMgmAAhHNvqFpDUoN-Llhq3s3TwY/view?usp=sharing" sx={{ color: "white", fontWeight: "bold" }}>
+              Privacy Policy
+              </Button> |  <Button component={Link} to="https://docs.google.com/document/d/1y8U1B1fI6gp7D0VT74DlA5eRLNqzApAW_5RdJGlUeX0/edit?usp=sharing" sx={{ color: "white", fontWeight: "bold" }}>
+              Refund Policy
+              </Button> | Sitemap
+                     </Typography>
         </Box>
 
       </Container>

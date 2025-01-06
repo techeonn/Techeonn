@@ -12,24 +12,24 @@ const HomePage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const fetchBlogs = async (page = 1) => {
-    try {
-      setLoading(true);
-      const response = await axios.get(`https://techeonn.vercel.app/api/blogs?page=${page}&limit=3`);
-      setBlogs(response.data.blogs);
-    } catch (err) {
-      console.log(err)
-      setError('Failed to load blogs');
-    } finally {
-      setLoading(false);
-    }
-  };
+  // const fetchBlogs = async (page = 1) => {
+  //   try {
+  //     setLoading(true);
+  //     const response = await axios.get(`https://techeonn.vercel.app/api/blogs?page=${page}&limit=3`);
+  //     setBlogs(response.data.blogs);
+  //   } catch (err) {
+  //     console.log(err)
+  //     setError('Failed to load blogs');
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
-  // Fetch blogs when the component mounts or when the page changes
-  useEffect(() => {
-    fetchBlogs();
-    console.log(blogs)
-  }, []);
+  // // Fetch blogs when the component mounts or when the page changes
+  // useEffect(() => {
+  //   fetchBlogs();
+  //   console.log(blogs)
+  // }, []);
 
   function formatSummary(summary, desiredLength) {
     if (summary.length > desiredLength) {
@@ -741,7 +741,7 @@ const HomePage = () => {
                 Toll Free Call
               </Typography>
               <Typography variant="body2" sx={{ fontWeight: 'bold' }}>
-                +91-8384017586
+                {/* +91-8384017586 */}
               </Typography>
             </Box>
           </Box>
