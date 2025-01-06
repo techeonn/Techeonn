@@ -8,9 +8,9 @@ import axios from "axios";
 
 const HomePage = () => {
 
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // const [blogs, setBlogs] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(null);
 
   // const fetchBlogs = async (page = 1) => {
   //   try {
@@ -31,36 +31,36 @@ const HomePage = () => {
   //   console.log(blogs)
   // }, []);
 
-  function formatSummary(summary, desiredLength) {
-    if (summary.length > desiredLength) {
-        // Truncate and add ellipsis
-        return summary.slice(0, desiredLength - 3) + "...";
-    } else if (summary.length < desiredLength) {
-        // Pad with spaces
-        return summary.padEnd(desiredLength, " ");
-    } else {
-        // If the summary is already the desired length, return as is
-        return summary;
-    }
-}
+//   function formatSummary(summary, desiredLength) {
+//     if (summary.length > desiredLength) {
+//         // Truncate and add ellipsis
+//         return summary.slice(0, desiredLength - 3) + "...";
+//     } else if (summary.length < desiredLength) {
+//         // Pad with spaces
+//         return summary.padEnd(desiredLength, " ");
+//     } else {
+//         // If the summary is already the desired length, return as is
+//         return summary;
+//     }
+// }
 
-  if (loading) {
-    return (
-      <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-        <CircularProgress />
-      </Container>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+  //       <CircularProgress />
+  //     </Container>
+  //   );
+  // }
 
-  if (error) {
-    return (
-      <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-        <Typography variant="h6" color="error">
-          {error}
-        </Typography>
-      </Container>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+  //       <Typography variant="h6" color="error">
+  //         {error}
+  //       </Typography>
+  //     </Container>
+  //   );
+  // }
 
   return (
     <Box sx={{ minHeight: "100vh", py: 0 }}>
